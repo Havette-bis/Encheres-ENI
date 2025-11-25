@@ -1,0 +1,43 @@
+:root {
+	--couleur-principal: #ADEEFA;
+	--couleur-secondaire: #C68A65;
+	--couleur-annexe: #FFEC80
+}
+
+
+* {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+.raleway-font {
+  font-family: "Raleway", sans-serif, "Segoe UI";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+	background-color: var(--couleur-principal)
+}
+
+.navbar-brand, .nav-link {
+	font-size: 1.5rem;
+}
+
+/* Fragment-entete */
+#cadreInfos {
+	width: 270px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px dashed var(--couleur-secondaire);
+	font-size: 1.2rem;
+}
+
+/* Index */
+h1 {
+	text-align: center;
+}

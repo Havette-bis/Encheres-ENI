@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr"
+      data-th-fragment="layout(titrePage, contenuPage, ressourcesSupp)">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-th-replace="${titrePage}">Eni-Encheres</title>
+
+    <!-- Déclaration des CSS du layout : -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" data-th-href="@{/css/layout.css}">
+
+    <!-- Permettre d’ajouter des ressources CSS supplémentaires -->
+    <th:block data-th-replace="${ressourcesSupp} ?: ~{}"></th:block>
+
+</head>
+
+<body class="raleway-font">
+<!-- Intégration du fragment d'entête -->
+<div data-th-replace="~{fragments/fragment-entete :: frag-entete}"></div>
+
+<!-- Contenu de la page (dynamique) -->
+<main data-th-replace="${contenuPage} ?: ~{}">
+</main>
+
+</body>
+</html>

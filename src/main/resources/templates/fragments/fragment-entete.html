@@ -1,0 +1,31 @@
+<header xmlns:th="http://thymeleaf.org" data-th-fragment="frag-entete">
+
+	<nav class="navbar">
+		<div class="d-flex justify-between m-4">
+			<a class="navbar-brand" href="/">
+				<img class="d-inline-block align-text-center me-2" data-th-src="@{/images/logo-encheres.png}" alt="logo enchères" width="75"
+					height="75">
+				Eni-Encheres
+			</a>
+		</div>
+		<div>
+			<ul class="navbar-nav d-flex flex-row">
+				<li class="nav-item mx-4">
+					<a class="nav-link active" aria-current="page" href="/">Accueil</a>
+				</li>
+				<li class="nav-item mx-4">
+					<a class="nav-link" href="/login">S'inscrire - Se connecter</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="d-flex justify-content-end">
+		<div id="cadreInfos" class="m-4 rounded-pill shadow-sm">
+			<p>Date du jour : 
+				<span data-th-text="${#dates.format(#dates.createNow(), 'dd/MM/yyyy')}"></span>
+			</p>
+		</div>
+	</div>
+
+</header>
